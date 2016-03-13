@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem 'sqlite3'
+end
+
+gem "aasm"
 
 gem "awesome_rails_console"
 gem "font-awesome-rails"
@@ -12,7 +18,7 @@ gem "devise"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

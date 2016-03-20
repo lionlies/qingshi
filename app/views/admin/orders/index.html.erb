@@ -3,18 +3,18 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#      </th>
-      <th>生成時間      </th>
-      <th>訂購者      </th>
-      <th>訂單狀態      </th>
+      <th>#</th>
+      <th>生成時間</th>
+      <th>訂購者</th>
+      <th>訂單狀態</th>
     </tr>
   </thead>
   <tbody>
     <% @orders.each do |order| %>
     <tr>
       <th> <%= link_to order.id, admin_order_path(order) %> </th>
-      <th> <%= order.created_at.to_s(:long) %>     </th>
-      <th> <%= order.user.email %>      </th>
+      <th> <%= order.created_at.to_s(:long) %> </th>
+      <th> <%= order.user.email %> </th>
       <th> <%= render_order_state(order) %> </th>
     </tr>
     <% end %>

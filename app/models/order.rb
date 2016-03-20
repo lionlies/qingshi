@@ -8,34 +8,6 @@ class Order < ActiveRecord::Base
 
   before_create :generate_token
 
-  def generate_token
-    self.token = SecureRandom.uuid
-  end
-
-  def build_item_cache_from_cart(cart)
-    cart.items.each do |cart_item|
-      item = items.build
-      item.product_name =cart_item.title
-      item.quantity = cart.find_cart_item(cart_item).quantity
-      item.price = cart_item.price
-      item.save
-    end
-  end
-
-  def calculate_total!(cart)
-    self.total = cart.total_price
-    self.save
-  end
-
-  def set_payment_with!(method)
-    self.update_columns(payment_method: method)
-  end
-
-  def pay!
-    self.update_columns(is_paid: true)
-  end
-
-
   include AASM
 
   aasm do
@@ -66,6 +38,34 @@ class Order < ActiveRecord::Base
     event :cancel_order do
       transitions from: [:order_placed, :paid], to: :order_cancelled
     end
+  end
+
+
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
+
+  def build_item_cache_from_cart(cart)
+    cart.items.each do |cart_item|
+      item = items.build
+      item.product_name = cart_item.title
+      item.quantity = cart.find_cart_item(cart_item).quantity
+      item.price = cart_item.price
+      item.save
+    end
+  end
+
+  def calculate_total!(cart)
+    self.total = cart.total_price
+    self.save
+  end
+
+  def set_payment_with!(method)
+    self.update_columns(payment_method: method)
+  end
+
+  def pay!
+    self.update_columns(is_paid: true)
   end
 
 end

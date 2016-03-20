@@ -4,6 +4,10 @@ class Cart < ActiveRecord::Base
 
   def add_product_to_cart(product)
     items << product
+  # 上面那行也能寫成像下面這樣
+  # ci = cart_items.build
+  # ci.product = product
+  # ci.save
   end
 
   def total_price

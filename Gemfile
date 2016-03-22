@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem "roadie", "2.4.3"
+gem "letter_opener", group: :development
+
 group :development do
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'sqlite3'

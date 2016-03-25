@@ -7,3 +7,17 @@ zh-TW:
       shipped: 已到貨
       order_cancelled: 取消訂單
       goods_returned: 退貨
+  can_not_be_blank: 空白惹～
+  activerecord:
+    errors:
+      models:
+        order_info:
+          attributes:
+            shipping_address:
+              blank: 不可以空白
+            shipping_name:
+              blank: 不可以空白
+            billing_name:
+              blank: 不可以空白
+            billing_address:
+              blank: 不可以空白

@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
       current_cart.clean!
-      OrderMailer.notify_order_placed(Order.last).deliver!
+#      OrderMailer.notify_order_placed(Order.last).deliver!
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
       else
         render text: "信用卡付款失敗"
       end
-      
+
     else
       render text: "交易失敗"
     end

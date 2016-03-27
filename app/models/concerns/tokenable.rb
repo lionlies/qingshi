@@ -1,5 +1,5 @@
 module Tokenable
-  extend ActiveRecord::Concern
+  extend ActiveSupport::Concern
 
   included do
     before_create :generate_token

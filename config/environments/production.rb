@@ -82,4 +82,13 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = { host: "https://gentle-beyond-31212.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["mailgun_user"],
+    password:       ENV["mailgun_secret"],
+    domain:         sandbox681a100b7d91471488bab64888bb2129.mailgun.org,
+    authentication: :plain,
+  }
 end

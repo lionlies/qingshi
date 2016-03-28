@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
       aws_secret_access_key:  ENV["aws_s3_secret_access_key"],
       region:                 ENV["aws_region"]
     }
-    config.fog_directory = ""
+    config.fog_directory = "xditerailstest"
   else
     config.storage :file
   end

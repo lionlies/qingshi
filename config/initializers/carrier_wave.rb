@@ -3,9 +3,9 @@ CarrierWave.configure do |config|
     config.storage :fog
     config.fog_credentials = {
       provider:               "AWS",
-      aws_access_key_id:      ENV["aws_s3_access_key_id"],
-      aws_secret_access_key:  ENV["aws_s3_secret_access_key"],
-      region:                 ENV["aws_region"]
+      aws_access_key_id:      ENV["s3_key_id"],
+      aws_secret_access_key:  ENV["s3_key_secret"],
+      region:                 "ap-northeast-1"
     }
     config.fog_directory = "xditerailstest"
   else

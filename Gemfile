@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+
+gem "bullet"
+gem "quiet_assets", group: :development
+gem "seo_helper"
+
+gem "rack-mini-profiler"
+
 gem "delayed_job_active_record"
 gem "fog"
 

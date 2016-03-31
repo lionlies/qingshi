@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem "omniauth-facebook"
 gem "bullet"
 gem "quiet_assets", group: :development
 gem "seo_helper"

@@ -14,16 +14,14 @@
       </p>
     </div>
     <div>數量： <%= @product.quantity %> </div>
-    <div class="product_price"> $ <%= @product.price %></div>
+    <div class="product-price"> $ <%= @product.price %></div>
     <div class="pull-right">
-    <% if @product.quantity > 0 %>
-      <%= link_to "加入購物車", add_to_cart_product_path(@product), method: :post,
-                   class: "btn btn-lg btn-danger" %>
-    <% else %>
-      已銷售一空
-    <% end %>
-    <%= link_to "/ 結帳去", carts_path %>
-
+      <% if @product.quantity > 0 %>
+        <%= link_to "加入購物車", add_to_cart_product_path(@product), method: :post,
+                     class: "btn btn-lg btn-danger" %>
+      <% else %>
+        已銷售一空
+      <% end %>
     </div>
   </div>
 </div>

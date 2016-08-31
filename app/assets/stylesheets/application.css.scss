@@ -17,7 +17,20 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.row>h2 {
+.row > h2 {
   font-size: 30px;
   text-align: center;
+  padding-bottom: 20px;
+}
+
+#copyright {
+  font-size: 12px;
+  text-align: center;
+}
+
+#contact-us {
+  text-align: center;
+  h5 {
+    font-weight: bold;
+  }
 }

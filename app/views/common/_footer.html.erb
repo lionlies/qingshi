@@ -1,0 +1,31 @@
+<footer>
+  <div class="container">
+
+    <div id="contact-us">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <div>
+          <%= mail_to "lionlies@gmail.com", "lionlies@gmail.com" %>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <%= link_to "https://www.facebook.com/lionlies", target: "_blank" do %>
+          <i class="fa fa-facebook-official fa-3x"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="copyright">
+    <p>2016 © Copyright 簡。輕食 - All right reserved</p>
+  </div>
+
+</footer>

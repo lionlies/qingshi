@@ -1,27 +1,37 @@
-<div class="row">
-  <div class="col-md-6">
+<div class="row show-product">
+
+  <div class="col-md-5 col-md-offset-1">
     <% if @product.photo.present? %>
       <%= image_tag(@product.photo.image.medium.url, class: "thumbnail") %>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
   </div>
-  <div class="col-md-6">
+
+  <div class="col-md-3 col-md-offset-1">
+
     <h2> <%= @product.title %></h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
+
+    <div style="height:240px;">
+      <p><%= @product.description %></p>
     </div>
+
+    <hr>
+<!--
     <div>數量： <%= @product.quantity %> </div>
-    <div class="product-price"> $ <%= @product.price %></div>
-    <div class="pull-right">
-      <% if @product.quantity > 0 %>
-        <%= link_to "加入購物車", add_to_cart_product_path(@product), method: :post,
-                     class: "btn btn-lg btn-danger" %>
-      <% else %>
-        已銷售一空
-      <% end %>
+-->
+
+    <div class="product-price pull-right">
+      $ <%= @product.price %>
+      <span>
+        <% if @product.quantity > 0 %>
+          <%= link_to "加入購物車", add_to_cart_product_path(@product), method: :post,
+                       class: "btn btn-info" %>
+        <% else %>
+          已銷售一空
+        <% end %>
+      </span>
     </div>
+
   </div>
 </div>

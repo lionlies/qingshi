@@ -17,29 +17,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.product-price{
-  padding-top: 20px;
-  padding-bottom: 20px;
-
+.row>h2 {
   font-size: 30px;
-  font-weight: bold;
-  color: #ff007c;
- }
-
-
-.caption {
-  .product-price {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 16px;
-  }
-}
-
-#owl-demo .item{
-  margin: 3px;
-}
-#owl-demo .item img{
-  display: block;
-  width: 100%;
-  height: auto;
+  text-align: center;
 }

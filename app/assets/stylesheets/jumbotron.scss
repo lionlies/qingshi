@@ -1,0 +1,28 @@
+.jumbotron {
+  background-image:url('http://newsite.personalnutrition.org/WebSite/Images/home_banner_food.jpg');
+  height:300px;
+  background-repeat:no-repeat;
+  background-size: cover;
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    font-size:20px;
+    color:#fff;
+  }
+
+  .container {
+    position:relative;
+    top:100px;
+    left: 780px;
+
+    h1 {
+      color:#ffffff;
+      font-size:48px;
+      font-family:'Shift', sans-serif;
+      font-weight:bold;
+    }
+  }
+}

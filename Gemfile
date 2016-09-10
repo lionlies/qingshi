@@ -10,7 +10,7 @@ gem "rack-mini-profiler"
 gem "delayed_job_active_record"
 gem "fog"
 
-ruby "2.2.5"
+
 
 gem "figaro"
 gem "pay2go"
